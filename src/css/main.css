@@ -1,0 +1,155 @@
+/*main*/
+
+.hello_container{
+  display: flex;
+}
+
+ @media (max-width:767px){
+   body.lock{
+     overflow: hidden;
+   }
+   .container{
+     margin-top:40px;
+     padding-bottom: 50px;
+    }
+ }
+ .hello_container{
+   display: flex;
+ }
+ @media (max-width:767px){
+   .hello_container{
+     flex-direction: column-reverse;
+     text-align: center;
+     align-items: center;
+   }
+ }
+ .hello_content{
+   align-items: flex-start;
+   padding: 18px 110px 0px 0px;
+   flex: 1 1 auto;
+}
+@media (max-width:767px){
+  .hello_content{
+    padding: 18px 0px 0px 0px;
+  }
+}
+.hello_content *:last-child{
+  margin-bottom: 0px;
+}
+ .hello_title{
+   margin-bottom: 25px;
+ }
+ .hello_text{
+   margin-bottom: 20px;
+ }
+ .hello_btn{
+   margin: 0 0 25px 0;
+ }
+ .hello_btn a{
+   text-decoration: none;
+   color: white
+ }
+ .hello_btn::before,
+ .hello_btn::after{
+   content: '';
+   position: relative;
+   background-color: white;
+   width: 10px;
+   height: 3px;
+   transition: all 0.3s ease 0s;
+ }
+ .hello_btn::after{
+   left:15px;
+   transform: rotate(-45deg);
+ }
+ .hello_btn::before{
+   left: 160px;
+   transform: rotate(45deg);
+ }
+ .hello_btn.active::after{
+   transform: rotate(45deg);
+ }
+ .hello_btn.active::before{
+   transform: rotate(-45deg);
+ }
+ @media (max-width:767px){
+   .hello_text{
+     margin-bottom: 15px;
+     padding: 0px 15px 0px 15px;
+   }
+   .hello_btn{
+     margin: 0 0 10px 0;
+   }
+ }
+.hello_ava{
+  height: 243px;
+  width: 243px;
+  flex: 0 0 243px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: -5px 13px 0px 0px #edf7fa;
+}
+.hello_ava img{
+  max-width: 100%;
+}
+@media (max-width:767px){
+  .hello_ava{
+    height: 170px;
+    width: 170px;
+    flex: 0 0 170px;
+  }
+}
+/*resume*/
+.resume{
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.resume.active{
+  opacity: 1;
+  border: 0.5px solid silver;
+  margin-top: 30px;
+  background: url("https://phonoteka.org/uploads/posts/2021-04/1619655414_1-phonoteka_org-p-krasivii-fon-dlya-rezyume-1.jpg") 0 0/cover no-repeat;
+  padding:15px
+}
+.resume_title{
+  width: 100%;
+  text-align:center;
+}
+.resume_text h2{
+  margin: 30px 0 20px 10px;
+}
+.resume_text h3{
+  margin: 15px 0 10px 0;
+  text-decoration: underline;
+}
+.resume_text li{
+  margin-left: 20px
+}
+.resume_text a{
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+.hSkills{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  justify-content: center;
+}
+.grid_item{
+  display: inline-block;
+}
+
+.grid_item b{
+  color: gray
+}
+
+@media (max-width:767px){
+  .hSkills{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+  }
+}
+
