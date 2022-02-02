@@ -9,15 +9,23 @@
 
 .project{
   display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
+  text-align: center;
+}
+.project.description{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.project.description div{
+  font-size: 20px;
 }
 .project img{
-  height: 150px;
-  width:300px;
-}
-.project img:hover{
-  height: 250px;
-  width:400px;
+  height: 300px;
+  width:600px;
 }
 @media (max-width:767px){
   .project{
@@ -26,5 +34,9 @@
   .project img{
     height: 170px;
     width:350px;
+    margin-bottom: 50px;
+  }
+  .project.description{
+    margin-top: 20px;
   }
 }

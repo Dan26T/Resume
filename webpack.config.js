@@ -22,7 +22,6 @@ const optimisation = () => {
                 new TerserWebpackPlugin()
 
             ]
-
     }
     return config
 }
@@ -32,7 +31,8 @@ module.exports ={
     mode: 'development',
     entry: {
         main: './js/scripts0.js',
-        analytics: './js/analytics.js'
+        slider: ['./js/slider.js', './js/slick.js'],
+        analytics: './js/analytics.js',
     },
     output: {
         filename: `${filename('js')}`,

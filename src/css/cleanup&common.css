@@ -25,7 +25,7 @@ body.lock{
 }
 
 .block_c_p{
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .block_c_p div:last-child{
   margin-bottom: 0px;
@@ -100,4 +100,11 @@ body.lock{
 }
 .content.none{
   display: none;
+}
+a{
+  transition: color 500ms;
+}
+.text a:hover{
+  color: #bb4949;
+  font-size: 25px;
 }

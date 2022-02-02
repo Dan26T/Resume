@@ -12,7 +12,7 @@ import '@img/telegram.png'
 import '@img/todoTs.png'
 import '@img/vk.png'
 
-let helloBtn = document.querySelector('.hello_btn')
+let helloBtn = document.querySelector('.hello_btn') ? document.querySelector('.hello_btn') : undefined
 let resume = document.querySelector('.resume') ? document.querySelector('.resume') : undefined
 let bodyEl = document.querySelector('body')
 let headerBurger = document.querySelector('.header_burger')
@@ -53,12 +53,16 @@ const openResumeHandler = function() {
     }
     bodyEl.classList.toggle('lock')
     helloBtn.classList.toggle('active')
-    resume.classList.toggle('active')
+    if (resume !== undefined) {
+        resume.classList.toggle('active')
+    }
     openMenu = !openMenu
     lockBody = !lockBody
 }
 
-helloBtn.addEventListener('click', openResumeHandler)
+if (helloBtn !== undefined) {
+    helloBtn.addEventListener('click', openResumeHandler)
+}
 
 window.onbeforeunload = function () {
     window.scrollTo(0,0);
